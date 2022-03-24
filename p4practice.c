@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int input()
 {
   int a;
@@ -7,7 +6,6 @@ int input()
   scanf("%d",&a);
   return a;
 }
-
 int find_fibo(int n)
 {
   int i=2,sum=0;
@@ -17,17 +15,13 @@ int find_fibo(int n)
   for(i=2;i<=n;i++)
   {
     a[i]=a[i-1]+a[i-2];
-    
-    
   }
   return a[n];
 }
-
 void output(int n,int fibo)
 {
   printf("The %dth term of the fibonacci series is: %d",n,fibo);
 }
-
 int main()
 {
   int n,result;
