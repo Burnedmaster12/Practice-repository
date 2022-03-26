@@ -94,3 +94,92 @@ Line input_line();
 void input_n_lines(int n, Line l[n]);
 void find_perimeter(Polygon *p);
 void output(Polygon p);
+
+
+
+
+
+                     SET 3
+
+1. Write a program to find sum of two fractions
+void input(int *num1, int *den1, int *num2, int *den2);
+void add(int num1,int den1, int num2, int den2, int *num3, int *den3);
+void output(int num1, int den1, int num2, int den2, int num3, int den3);
+input:
+1 4
+1 2
+output:
+1/2 + 1/4 = 3/4
+
+
+2. Write a program to find the smallest of three fractions.
+struct _fraction
+{
+int num,den;
+};
+typedef _fraction Fraction
+Fraction input_fraction();
+Fraction Largest_fraction(Fraction f1, Fraction f2, Fraction f3)
+void output(Fraction f1, Fraction f2, Fraction f3, Fraction largest)
+
+
+3. Write a program find the nCr given n and r.
+int input_n_and_r(int *n, int *r)
+int ncr(int n, int r);
+void output(int n, int r, int result);
+
+
+4. Write a program to evaluate a polynomial at a given point using horners method.
+int input_degree();
+float input_x();
+void input_coefficients(int n, float a[n]);
+float evaluate_polynomial(int n, float a[n], float x);
+void out_put(int n, float a[n], float x, float result);
+input:
+1 1 1
+output:
+1+1*x + 1*x^2 at 1.000000 is 1.000000
+
+
+5. write a program to find the index of the largest number in an array.
+int input_size();
+void input_array(int n, int a[n]);
+int find_largest(int n, int a[n]);
+void out_put(int n, int a[n], int largest);
+
+
+6. Write a program to count the number of words in a string using strtok ( string.h)
+void input_string(char *a);
+int count_words(char *string);
+void output(char *string, int no_words);
+input:
+hello world hello
+
+output:
+3
+
+
+7. Write a program to add two fractions.
+struct _fraction
+{
+int num,den;
+};
+typedef _fraction Fraction;
+int find_gcd(int a, int b);
+Fraction input_fraction();
+Fraction add_fractions(Fraction f1, Fraction f2)
+void output(Fraction f1, Fraction f2, Fraction f3, Fraction sum)
+
+
+8. Write program to add n fractions
+struct _fraction
+{
+int num,den;
+};
+typedef _fraction Fraction;
+int find_gcd(int a, int b);
+Fraction input_fraction();
+void input_in_fractions(int n, Fraction f[n]);
+Fraction add_fractions(Fraction f1, Fraction f2);
+Fraction add_n_fractions(int n,Fraction f[n]);
+void output(int n, Fraction f[n], Fraction sum);
