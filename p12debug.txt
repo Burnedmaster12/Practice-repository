@@ -1,0 +1,163 @@
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from ./a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x9c7: file p12practice.c, line 63.
+(gdb) r
+Starting program: /home/runner/Practice-repository/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p12practice.c:63
+warning: Source file is more recent than executable.
+63  {
+(gdb) s
+66      n=inputn();
+(gdb) s
+inputn () at p12practice.c:4
+4   {
+(gdb) s
+6       printf("Enter the degree of the polynomial:");
+(gdb) n
+7       scanf("%d",&n);
+(gdb) n
+Enter the degree of the polynomial:5
+8       return n;
+(gdb) n
+9   }
+(gdb) n
+main () at p12practice.c:67
+67      x=inputx();
+(gdb) s
+inputx () at p12practice.c:11
+11  {
+(gdb) s
+13      printf("\nEnter the value of x:");
+(gdb) n
+
+14      scanf("%f",&x);
+(gdb) n
+Enter the value of x:7
+15      return x;
+(gdb) n
+16  }
+(gdb) n
+main () at p12practice.c:68
+68      inputco(n,a);
+(gdb) s
+inputco (n=5, a=0x7ffd684d0f00) at p12practice.c:19
+19      for(int i=0;i<=n;i++)
+(gdb) n
+21          printf("\nEnter the coefficients of the polynomial:");
+(gdb) n
+
+22          scanf("%f",&a[i]);
+(gdb) n
+Enter the coefficients of the polynomial:7
+19      for(int i=0;i<=n;i++)
+(gdb) n
+21          printf("\nEnter the coefficients of the polynomial:");
+(gdb) n
+
+22          scanf("%f",&a[i]);
+(gdb) n
+Enter the coefficients of the polynomial:4
+19      for(int i=0;i<=n;i++)
+(gdb) n
+21          printf("\nEnter the coefficients of the polynomial:");
+(gdb) n
+
+22          scanf("%f",&a[i]);
+(gdb) n
+Enter the coefficients of the polynomial:4
+19      for(int i=0;i<=n;i++)
+(gdb) n
+21          printf("\nEnter the coefficients of the polynomial:");
+(gdb) n
+
+22          scanf("%f",&a[i]);
+(gdb) n
+Enter the coefficients of the polynomial:5
+19      for(int i=0;i<=n;i++)
+(gdb) n
+21          printf("\nEnter the coefficients of the polynomial:");
+(gdb) n
+
+22          scanf("%f",&a[i]);
+(gdb) n
+Enter the coefficients of the polynomial:6
+19      for(int i=0;i<=n;i++)
+(gdb) n
+21          printf("\nEnter the coefficients of the polynomial:");
+(gdb) n
+
+22          scanf("%f",&a[i]);
+(gdb) n
+Enter the coefficients of the polynomial:6
+19      for(int i=0;i<=n;i++)
+(gdb) n
+24  }
+(gdb) n
+main () at p12practice.c:69
+69      result=evaluate(n,x,a);
+(gdb) n
+70      output(n,x,a,result);
+(gdb) d
+Delete all breakpoints? (y or n) n
+(gdb) s
+output (n=5, x=7, a=0x7ffd684d0f00, result=117194) at p12practice.c:55
+55      for(int i=0;i<n;i++)
+(gdb) n
+57        printf("%fx^%d+",a[i],i); 
+(gdb) n
+55      for(int i=0;i<n;i++)
+(gdb) n
+57        printf("%fx^%d+",a[i],i); 
+(gdb) n
+55      for(int i=0;i<n;i++)
+(gdb) n
+57        printf("%fx^%d+",a[i],i); 
+(gdb) n
+55      for(int i=0;i<n;i++)
+(gdb) n
+57        printf("%fx^%d+",a[i],i); 
+(gdb) n
+55      for(int i=0;i<n;i++)
+(gdb) n
+57        printf("%fx^%d+",a[i],i); 
+(gdb) n
+55      for(int i=0;i<n;i++)
+(gdb) n
+59      printf("%fx^%d at %f is",a[n],n,x);
+(gdb) n
+60      printf("%f\n",result);
+(gdb) n
+7.000000x^0+4.000000x^1+4.000000x^2+5.000000x^3+6.000000x^4+6.000000x^5 at 7.000000 is117194.000000
+61  }
+(gdb) n
+main () at p12practice.c:71
+71      return 0;
+(gdb) s
+72  }(gdb) c
+Continuing.
+[Inferior 1 (process 587) exited normally]
+(gdb) p
+The history is empty.
+(gdb) l
+67      x=inputx();
+68      inputco(n,a);
+69      result=evaluate(n,x,a);
+70      output(n,x,a,result);
+71      return 0;
+72  }(gdb)
