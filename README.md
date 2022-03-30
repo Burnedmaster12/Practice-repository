@@ -183,3 +183,103 @@ void input_in_fractions(int n, Fraction f[n]);
 Fraction add_fractions(Fraction f1, Fraction f2);
 Fraction add_n_fractions(int n,Fraction f[n]);
 void output(int n, Fraction f[n], Fraction sum);
+
+
+                  SET 4
+    17. Write a program to find the weight of the camel given height, length and stomach radius. weight = pi * stomach_raduius^3 * sqrt(height * length). using four functions and following function signatures.
+
+
+float input_radius();
+float input_heigth();
+float input_length();
+float find_weight(float radius, float height, float length);
+void output(float radius, float height, float length, float weight);
+and int main()
+
+
+18. Write a program to find the weight of the camel given height, length and stomach radius. weight = pi * stomach_raduius^3 * sqrt(height * length). using four functions and following function signatures.
+struct camel {
+float radius, height, length, weight;
+};
+typedef struct camel Camel;
+Camel input(); /* do not take weight as input from the user */
+void find_weight(Camel *c); /*passing address variable */
+void output(Camel c);
+and int main()
+
+
+19. When a camel is
+a) sick its stomach_radius is less than height and less than length.
+b) happy its height is less than length and less than stomach_radius.
+c) tense its length is less than height and stomach_radius.
+Write a program to find whether a camel is sick, happy, or tense with functions and structure.
+struct camel {
+float radius, height, length, weight;
+int mood; /* sick = 0, happy = 1, tense = 2 */
+};
+
+
+typedef struct camel Camel;
+Camel input(); /* do not take weight and mood as input from the user */
+void find_weight(Camel *c); /*passing address variable */
+void find_mood(Camel *c);
+void output(Camel c);
+and int main()
+
+
+20. Write a program to find borga^x given x.
+The formula for finding borga^x
+
+
+1 + x/3! + x^2/5! + x^3/7! .....
+stop when the next term is less 0.000001 With four functions.
+
+
+21. Write a program to sort a an array using bubble sort.
+use following function prototypes.
+void input(int n, int a[n]);
+void bubble_sort(int n, int a[n]);
+void output_array(int n, int a[n]); /* print all the elements of the array */
+and main.
+
+
+22. Write a program to search for an element using binary search.
+use following function prototypes.
+void input(int n, int a[n]);
+void sort(int n, int a[n]);
+int bin_search(int n, int a[n], int key);
+void print_position(int n, int a[n], int key, int position);
+and main.
+
+
+23. Write a program to find if a name is a nice name.
+A name is nice if it has at least 2 vowels and 2 consonants in it.
+with four functions.
+
+
+void input_name(char *s);
+int is_name_nice(char *s);
+void print_name(char *s, int is_nice);
+and
+main().
+
+
+Array of Structures
+
+
+24. Write program to find the weight of a truck load of n camels.
+Take input
+a) truck weight and
+b) height, radius and length of n camels
+and compute the total truck weight. ( Truck weight + weight of the camels)
+With functions.
+
+
+Call functions from earlier programs where required.
+float input_truck_weight();
+int input_no_camels();
+void input_camel_details(int n, Camel c[n]);
+float comput_total_weight(int n, Camel c[n], float truck_weight);
+void ouput(float total_truck_weight);
+and
+int main()
