@@ -1,0 +1,81 @@
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from ./a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x97e: file p18practice.c, line 40.
+(gdb) r
+Starting program: /home/runner/Practice-repository/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p18practice.c:40
+40  int main(){
+(gdb) s
+42      Asis = input_camel();
+(gdb) s
+input_camel () at p18practice.c:15
+15  camel input_camel(){
+(gdb) s
+17      printf("Enter the radius of the camel's stomach : \t");
+(gdb) n
+18      scanf("%f", &Asis.radius);
+(gdb) n
+Enter the radius of the camel's stomach :   25
+19      printf("Enter the height of the camel : \t");
+(gdb) n
+20      scanf("%f", &Asis.height);
+(gdb) n
+Enter the height of the camel :     70
+21      printf("Enter the length of the camel : \t");
+(gdb) n
+22      scanf("%f", &Asis.length);
+(gdb) n
+Enter the length of the camel :     50
+23      return Asis;
+(gdb) n
+24  }
+(gdb) n
+main () at p18practice.c:43
+43      find_weight(&Asis);
+(gdb) s
+find_weight (Asis=0x7ffdf89e4900) at p18practice.c:29
+29      Asis->weight = (PI * pow(Asis->radius,3) * sqrt(Asis->height*Asis->length));
+(gdb) n
+31  }
+(gdb) n
+main () at p18practice.c:44
+44      output(Asis);
+(gdb) s
+output (Asis=...) at p18practice.c:36
+36      printf("The weight of the camel whose stomach radius is %0.2f and its height is %0.2f and its length is %0.2f is %0.2f \n   ",Asis.radius,Asis.height,Asis.length,Asis.weight);
+(gdb) n
+The weight of the camel whose stomach radius is 25.00 and its height is 70.00 and its length is 50.00 is 2904046.50 
+37  }
+(gdb) n
+main () at p18practice.c:45
+45      return 0;
+(gdb) n
+46  }
+(gdb) c
+Continuing.
+   [Inferior 1 (process 2109) exited normally]
+(gdb) p
+The history is empty.
+(gdb) l
+41      camel Asis;
+42      Asis = input_camel();
+43      find_weight(&Asis);
+44      output(Asis);
+45      return 0;
+46  }
