@@ -18,7 +18,6 @@ Breakpoint 1 at 0x97e: file p18practice.c, line 40.
 (gdb) r
 Starting program: /home/runner/Practice-repository/a.out 
 warning: Error disabling address space randomization: Operation not permitted
-
 Breakpoint 1, main () at p18practice.c:40
 40  int main(){
 (gdb) s
